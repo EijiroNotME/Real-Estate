@@ -5,7 +5,7 @@ import { Button } from "../Button/Button.jsx";
 import { motion } from "framer-motion";
 
 const Searchbar = () => {
-  const [isFocused, setIsFocused] = useState(true);
+  const [isFocused, setIsFocused] = useState(false);
   const [isSticky, setIsSticky] = useState(false);
 
   useEffect(() => {
@@ -31,11 +31,19 @@ const Searchbar = () => {
   return (
     <div
       className={`w-full p-4 transition-transform duration-300 ease-in-out ${
-        isSticky ? "fixed top-0 z-50 bg-white" : "absolute bottom-0 left-0"
+        isSticky
+          ? "fixed top-0 z-50 bg-transparent"
+          : "absolute bottom-0 left-0"
       }`}
     >
       {/* Main Searchbar */}
-      <div className="flex flex-row w-full p-4 bg-primary-default/5 bg-opacity-20 backdrop-blur-md rounded-md shadow-lg shadow-gray-400/20 justify-around gap-10 md:gap-20 lg:gap-96">
+      <div
+        className={`flex flex-row w-full p-4 bg-opacity-20 backdrop-blur-md rounded-md shadow-lg shadow-zinc-800-400/10 justify-around gap-10 md:gap-20 lg:gap-96 ${
+          isSticky
+            ? "bg-primary-default/50 fixed top-0 left-0 rounded-none"
+            : "bg-primary-default/5"
+        } `}
+      >
         <div className="flex-row flex items-center">
           <FaSearch className="w-6 h-6 text-gray-500" />
           <form className="flex-grow w-[300px] overflow-x-hidden px-4">
@@ -69,11 +77,11 @@ const Searchbar = () => {
           animate={{ opacity: 1, y: 0 }}
           exit={{ opacity: 0, y: isSticky ? -20 : 20 }}
           transition={{ duration: 0.3, ease: "easeInOut" }}
-          className={`${
+          className={`absolute w-[300px] mx-auto bg-primary-default/5 bg-opacity-20 backdrop-blur-md shadow-gray-400/10 p-6 rounded-md left-20 md:left-24 lg:left-40 2xl:left-72  ${
             isSticky
-              ? "absolute top-full text-secondary-default border border-secondary-default/20 shadow-xl shadow-secondary-default/20"
-              : "absolute bottom-full border-none shadow-none"
-          } w-[300px] mx-auto bg-primary-default/5 bg-opacity-20 backdrop-blur-md shadow-gray-400/10 p-6 rounded-md left-20 md:left-24 lg:left-40 2xl:left-72`}
+              ? "top-20 border border-secondary-default/20 shadow-xl shadow-secondary-default/20"
+              : "bottom-full border-none shadow-none"
+          }`}
         >
           <div className="flex flex-col gap-4">
             <div className="text-sm text-gray-600">Search for</div>
