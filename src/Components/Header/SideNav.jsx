@@ -1,6 +1,6 @@
 // Sidebar.jsx
 import React from "react";
-import { RiCloseCircleLine } from "react-icons/ri";
+import { IoCloseOutline } from "react-icons/io5";
 import { Button } from "../Button/Button.jsx";
 import { motion, AnimatePresence } from "framer-motion";
 
@@ -21,11 +21,11 @@ const SideNav = ({ onClose, menuItems, Logo, isOpen }) => {
             onClick={onClose}
             className="absolute top-5 left-6 text-primary-default"
           >
-            <RiCloseCircleLine className="w-7 h-7" />
+            <IoCloseOutline className="w-7 h-7" />
           </Button>
 
           <div className="flex flex-col items-center gap-8 p-6">
-            <img src={Logo} alt="Logo" className="w-24 h-auto" />
+            <img src={Logo} alt="Logo" className="w-36 h-auto" />
             <ul className="flex flex-col items-center gap-5 text-primary-default text-2xl">
               {menuItems?.map((menu, index) => (
                 <Button key={index} className="w-full menuItems" variant="menu">
