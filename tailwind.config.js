@@ -14,7 +14,7 @@ export default {
           "dark-10": "#F8F7F5",
         },
         secondary: {
-          default: "#1A1A1A",
+          default: "#1D1A16",
           text: "#1A1A1A",
           dark: "#000000",
         },
@@ -29,7 +29,7 @@ export default {
           oliveGreen: "#808000", // A muted green for a grounded and earthy feel
           champagne: "#F7E7CE", // A soft, elegant champagne for subtle highlights
           steelGray: "#4682B4", // A cool gray-blue for a modern, clean appearance
-          default: "#E97451", // A warm, inviting brown for a homey feel
+          default: "#DB9C48", // A warm, inviting brown for a homey feel
           navy: "#000080", // A classic navy for a strong, reliable tone
           amethyst: "#9966CC", // A lighter purple for a touch of sophistication
           forestGreen: "#228B22", // A rich green for a natural and calming effect

@@ -20,9 +20,20 @@
     font-family: "Playfair Display", sans-serif;
     @apply text-4xl lg:text-6xl font-bold;
   }
+  .listAds {
+    @apply flex flex-col gap-4 md:gap-0 lg:gap-4 text-lg md:text-sm lg:text-base p-10 md:p-0;
+  }
+  .textContainer {
+    @apply h-[400px] md:h-full;
+  }
 
   /* miniCards */
   .miniCards {
     @apply border-2 border-none bg-primary-default shadow-secondary-default/20 h-full shadow-md max-w-[300px] md:max-w-96 rounded-lg;
+  }
+
+  /* Default Container */
+  .defaultContainer {
+    @apply min-h-screen w-full px-4 md:px-20 py-10;
   }
 }

@@ -9,7 +9,7 @@ const SideNav = ({ onClose, menuItems, Logo, isOpen }) => {
     <AnimatePresence>
       {isOpen && (
         <motion.div
-          className={`fixed top-0 right-0 h-full bg-secondary-default z-50 shadow-2xl shadow-secondary-default/50 flex items-center justify-center w-[100%] sm:w-[90%] md:w-[40%] lg:w-[20%] `}
+          className={`fixed top-0 right-0 h-full bg-secondary-default z-[999] shadow-2xl shadow-secondary-default/50 flex items-center justify-center w-[100%] sm:w-[90%] md:w-[40%] lg:w-[20%] `}
           initial={{ x: "100%", opacity: 0 }} // Initial state when entering
           animate={{ x: "0%", opacity: 1 }} // State when visible
           exit={{ x: "100%", opacity: 0 }} // State when exiting
