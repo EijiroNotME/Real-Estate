@@ -10,6 +10,8 @@ export default {
         primary: {
           default: "#FFFFFF",
           text: "#FFFFFF",
+          dark: "#F8F7F5",
+          "dark-10": "#F8F7F5",
         },
         secondary: {
           default: "#1A1A1A",
