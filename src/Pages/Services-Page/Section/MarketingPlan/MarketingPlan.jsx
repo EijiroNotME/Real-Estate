@@ -13,13 +13,12 @@ const MarketingPlan = () => {
             <span className="text-accent-default">Marketing Plan</span>
           </h1>
           <p className="text-secondary-text my-auto md:text-lg leading-relaxed text-base">
-            Got it. Here’s a revised sub-paragraph tailored for a real estate
-            context: --- A strategic real estate marketing approach utilizes the
-            most advanced technologies and methodologies to navigate the
-            complexities of the market. By integrating cutting-edge tools and
-            innovative strategies, it ensures maximum visibility, optimal
-            performance, and effective solutions that drive success and growth
-            in the real estate sector.
+            A strategic real estate marketing approach utilizes the most
+            advanced technologies and methodologies to navigate the complexities
+            of the market. By integrating cutting-edge tools and innovative
+            strategies, it ensures maximum visibility, optimal performance, and
+            effective solutions that drive success and growth in the real estate
+            sector.
           </p>
         </div>
         <div className="grid grid-cols-1 lg:grid-cols-2 mt-10 gap-10">
