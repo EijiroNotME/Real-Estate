@@ -1,49 +1,55 @@
 import React from "react";
-import Contract from "../../../../assets/img/Contract1.jpg";
-import Contract2 from "../../../../assets/img/Contract2.jpg";
 import {
   _SellingItems,
   _BuyingItems,
 } from "../../../../_mock/_Process/_Process.jsx";
-import Glass from "../../../../Components/Glass/Glass.jsx";
+import Steps from "../../../../Components/Steps/Steps.jsx";
+import Contract from "../../../../assets/img/Contract1.jpg";
+import Contract2 from "../../../../assets/img/Contract2.jpg";
 
 const Process = () => {
   return (
-    <div className="defaultContainer mx-0 px-0">
-      {/* Selling Items Section */}
-      <div className="relative h-[100vh]  2xl:h-[70vh]">
-        {/* Heading on top of the Glass divs */}
-        <h1 className="absolute hidden sm:flex top-5 md:top-10 lg:top-20 left-1/2 transform -translate-x-1/2 text-2xl md:text-3xl lg:text-4xl font-bold text-white z-10">
-          The Selling Process
-        </h1>
-        <div className="absolute inset-0 flex flex-wrap gap-4 items-center justify-center p-4 md:pt-24 lg:pt-32">
-          {_SellingItems.map((item, index) => (
-            <Glass key={index} step={item.step} title={item.title} />
+    <div className="defaultContainer flex flex-col gap-10">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+        <div className=" h-full lg:col-span-1 xl:col-span-2">
+          <img
+            src={Contract}
+            alt="Contract"
+            className="object-bottom object-cover w-full h-[80vh] md:h-[60vh] rounded-md"
+          />
+        </div>
+
+        <div className="flex flex-col justify-center gap-4 h-full mx-0 lg:mx-10 md:col-span-2 xl:col-span-1">
+          <div className="text-left">
+            <h1 className="heroText text-3xl ">The Selling Process</h1>
+          </div>
+          {_SellingItems.map((items, index) => (
+            <div key={index}>
+              <Steps step={items.step} title={items.title} isReverse={false} />
+            </div>
           ))}
         </div>
-        <img
-          src={Contract}
-          alt="Contract Image 1"
-          className="w-full h-full object-cover object-bottom"
-        />
+        {/* Steps Section */}
       </div>
 
-      {/* Buying Items Section */}
-      <div className="relative h-[100vh]  2xl:h-[70vh]">
-        {/* Heading on top of the Glass divs */}
-        <h1 className="absolute hidden sm:flex top-5 md:top-10 lg:top-20 left-1/2 transform -translate-x-1/2 text-2xl md:text-3xl lg:text-4xl font-bold text-white z-10">
-          The Buying Process
-        </h1>
-        <div className="absolute inset-0 flex flex-wrap gap-4 items-center justify-center p-4 md:pt-24 lg:pt-32">
-          {_BuyingItems.map((item, index) => (
-            <Glass key={index} step={item.step} title={item.title} />
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4 ">
+        <div className="flex flex-col justify-center gap-4 h-full mx-0 lg:mx-10 md:col-span-2 xl:col-span-1">
+          <div className="text-right">
+            <h1 className="heroText text-3xl ">The Buying Process</h1>
+          </div>
+          {_BuyingItems.map((items, index) => (
+            <div key={index}>
+              <Steps step={items.step} title={items.title} isReverse={true} />
+            </div>
           ))}
         </div>
-        <img
-          src={Contract2}
-          alt="Contract Image 2"
-          className="w-full h-full object-cover object-bottom"
-        />
+        <div className=" h-full lg:col-span-1 xl:col-span-2">
+          <img
+            src={Contract2}
+            alt="Contract"
+            className="object-bottom object-cover w-full h-[80vh] md:h-[60vh] rounded-md"
+          />
+        </div>
       </div>
     </div>
   );
